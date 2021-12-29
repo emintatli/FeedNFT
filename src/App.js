@@ -108,12 +108,14 @@ function App() {
   <p className="main-text-p">
   Trade, earn, and win crypto on the most popular decentralized platform in the FeedWorld.
   </p>
-<div onClick={walletConnectHandler} className="button-nav px-3 py-2 mb-5">Connect Wallet</div>
+<div onClick={walletConnectHandler} className="button-nav px-3 py-2 mb-5">{contractData?"Connected":"Connect Wallet"}</div>
 
 {contractData?.userWallet&&<div>
-    <div className="d-flex align-items-center justify-content-between"><button class="btn btn-primary add-btn" onClick={()=>{amount>1&&setAmount(amount-1)}}>-</button><button class="btn btn-primary">{amount}</button>
-    <button class="btn btn-primary add-btn" onClick={()=>{setAmount(amount+1)}}>+</button></div><br/>
-    <button class="btn btn-primary mint-button" onClick={mintHandler}>Mint</button>
+    <div className="d-flex align-items-center justify-content-between">
+      <button class="button-n2 add-btn" onClick={()=>{amount>1&&setAmount(amount-1)}}>-</button>
+      <button class="button-n2">{amount}</button>
+    <button class="button-n2 add-btn" onClick={()=>{setAmount(amount+1)}}>+</button></div><br/>
+    <button class="button-n2 mint-button w-100" onClick={mintHandler}>Mint</button>
     </div>}
     <div class="d-flex justify-content-center">
         <img className="mx-2" width="39px" height="39px" src="/img/open.png"/>
