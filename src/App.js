@@ -83,8 +83,8 @@ function App() {
       
       </ul>
       <div class="mobile-nav-t d-flex justify-content-center">
-       <div className="button-nav">About FeedWorld</div>
-       <div className="button-nav">Buy Feed</div>
+       <div href="https://google.com" className="button-nav">About FeedWorld</div>
+       <div href="https://google.com" className="button-nav">Buy Feed</div>
       </div>
     </div>
   </div>
