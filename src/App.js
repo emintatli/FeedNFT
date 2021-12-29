@@ -79,51 +79,67 @@ function App() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex align-items-center justify-content-center">
         
-        <li class="nav-item mx-4">
-          <a class="nav-link active" aria-current="page" href="#">Welcome</a>
-        </li>
-
-     
-          <li class="nav-item dropdown mx-4">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            RoadMaps
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav-item mx-4">
-          <a class="nav-link" href="#">Our Team</a>
-        </li>
-        <li class="nav-item mx-4">
-          <a class="nav-link" href="#">FAQ</a>
-        </li>
+       
       
       </ul>
-      <div class="d-flex justify-content-center">
-        <img className="mx-2" width="39px" height="39px" src="/img/open.png"/>
-        <img className="mx-2" width="39px" height="39px" src="/img/med.png"/>
-        <img className="mx-2" width="39px" height="39px" src="/img/twit.png"/>
-        <img className="mx-2" width="39px" height="39px" src="/img/insta.png"/>
+      <div class="mobile-nav-t d-flex justify-content-center">
+       <div className="button-nav">About FeedWorld</div>
+       <div className="button-nav">Buy Feed</div>
       </div>
     </div>
   </div>
 </nav>
 
 <div className="welcome d-flex w-100 align-items-center justify-content-center flex-column">
-  <img width="350px" src="/img/main-b.png" />
-  <img onClick={walletConnectHandler} width="350px" className="mm-connect mt-3" src="/img/mconnect.png" />
-  {contractData?.userWallet&&<div>
+
+
+  <div className="d-flex mb-5 mt-5 main-welcomer">
+
+
+<div className="d-flex align-items-center justify-content-center flex-column">
+
+  <h1 className="main-title">
+  FIRST BATCH IN SALE!
+
+  </h1>
+  <h2 className="main-sub-title">
+    This is FeedWorld
+  </h2>
+  <p className="main-text-p">
+  Trade, earn, and win crypto on the most popular decentralized platform in the FeedWorld.
+  </p>
+<div onClick={walletConnectHandler} className="button-nav px-3 py-2 mb-5">Connect Wallet</div>
+
+{contractData?.userWallet&&<div>
     <div className="d-flex align-items-center justify-content-between"><button class="btn btn-primary add-btn" onClick={()=>{amount>1&&setAmount(amount-1)}}>-</button><button class="btn btn-primary">{amount}</button>
     <button class="btn btn-primary add-btn" onClick={()=>{setAmount(amount+1)}}>+</button></div><br/>
     <button class="btn btn-primary mint-button" onClick={mintHandler}>Mint</button>
     </div>}
-  <h1>Welcome to FeedWorld!
-</h1>
+    <div class="d-flex justify-content-center">
+        <img className="mx-2" width="39px" height="39px" src="/img/open.png"/>
+        <img className="mx-2" width="39px" height="39px" src="/img/med.png"/>
+        <img className="mx-2" width="39px" height="39px" src="/img/twit.png"/>
+        <img className="mx-2" width="39px" height="39px" src="/img/insta.png"/>
+      </div>
+
+</div>
+
+<div>
+
+<img className="img-cd" src="/img/100.png"/>
+
+</div>
+
+
+
+  </div>
+  
+ 
+
+   
+
+
+  <h1>Welcome to FeedWorld!</h1>
   <p className="mainp-text text-center">Before we had been born, we did now no longer have a threat to decide our destiny;<br/>
 we had been now no longer consulted approximately which own circle of relatives we'd be born into,<br/>
  which united states we'd be a citizen of, our language and color.<br/>
